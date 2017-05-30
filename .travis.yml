@@ -30,10 +30,5 @@ before_script:
 script:
   - echo "Travis branch is $TRAVIS_BRANCH"
   - echo "Travis branch is in pull request $TRAVIS_PULL+REQUEST"
-  - ./gradlew checkstyle clean build test jacocoTestReport check
-before_install:
-    - pip install --user codecov    #Install codecov
-after_success:
-    - bash <(curl -s https://codecov.io/bash)
-
+  - ./gradlew checkstyle clean build test
 after_failure: "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
