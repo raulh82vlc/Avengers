@@ -14,7 +14,7 @@ This means, `android` is strongly coupled with the Android framework and `domain
 required as is purely *Java* based, but not framework coupled.
 
 Inside the those modules, there are some good practices being employed, for instance:
-- There is an implementation of the *repository pattern* with a Network datasource (it could be extended to have others if required such as InternetDataSource and so on).
+- There is an implementation of the *repository pattern* with a Network datasource (it could be extended to have others if required such as CacheDataSource, PersistenceDataSource, and so on).
 
 *Retrofit 2* is the Network library which uses *OkHttp* as its client, this makes calls to the API, transforming the responses to models, for this purpose and properly handling
 the different requests on background threads with a pool of threads which passes their use cases result and avoids to lock the
