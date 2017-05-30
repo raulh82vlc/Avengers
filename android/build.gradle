@@ -44,6 +44,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
+    lintOptions {
+        /**
+         * Set whether lint should check for fatal errors during release builds. Default is true.
+         * If issues with severity "fatal" are found, the release build is aborted.
+         */
+        checkReleaseBuilds false
+        // if true, only report errors
+        ignoreWarnings true
+        // set to true to turn off analysis progress reporting by lint
+        quiet true
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix '.debug'
