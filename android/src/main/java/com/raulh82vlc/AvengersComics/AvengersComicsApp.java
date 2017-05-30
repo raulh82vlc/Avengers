@@ -38,6 +38,11 @@ public class AvengersComicsApp extends Application {
         applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+            Timber.tag("AvengersComics");
+            Timber.d("AvengersComicsApp -> onCreate");
+        }
     }
 
     public ApplicationComponent component() {
