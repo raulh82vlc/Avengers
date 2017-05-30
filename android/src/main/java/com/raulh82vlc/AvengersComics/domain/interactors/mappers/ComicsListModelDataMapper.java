@@ -63,7 +63,7 @@ public class ComicsListModelDataMapper {
                         && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getUri())
                         && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getExtensionOfImage())) {
                     uri = comic.getImagesRandom().get(0).getUri()
-                            + comic.getImagesRandom().get(0).getExtensionOfImage();
+                        + "." + comic.getImagesRandom().get(0).getExtensionOfImage();
                 }
                 String creators = getPeople(comic.getCreatorsOfComic().getCreators());
                 String characters = getPeople(comic.getCharactersOfComic().getCreators());
