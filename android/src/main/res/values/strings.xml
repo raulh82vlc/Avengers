@@ -1,0 +1,36 @@
+<!--
+  ~ Copyright (C) 2017 Raul Hernandez Lopez @raulh82vlc
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Avengers!</string>
+    <string name="main_screen">Comics!</string>
+    <string name="loading">loading…</string>
+    <string name="no_results">No comics found</string>
+    <string name="no_connection">Please, try again once there is Internet connection</string>
+    <string name="comics_list_empty">Comics list is empty</string>
+    <string name="title_on_comic_detail">Comic %1$s</string>
+    <string name="comic_detail_is_empty">Comic details are empty</string>
+    <string name="avenger_1">Captain America</string>
+    <string name="avenger_2">Apocalypse</string>
+    <string name="captain_america_id">1009220</string>
+    <string name="apocalypse_id">1009156</string>
+    <string name="error_http">There was a server error with code: %1$d, try again please</string>
+    <string name="error_io">There was a error: %1$s, try again please</string>
+    <string name="no_comic_info">There is not coming info available, try later</string>
+    <string name="comid_id">id: %1$s</string>
+    <string name="creators">Creators: %1$s</string>
+    <string name="characters">Characters: %1$s</string>
+</resources>
