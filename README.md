@@ -1,12 +1,11 @@
-# Avengers! Comics
-
+# Avengers! Comics [![Build Status](https://travis-ci.org/raulh82vlc/Avengers.svg?branch=master)](https://travis-ci.org/raulh82vlc/Avengers)
 Avengers comics shows a list of comics from Captain America
 
 This project uses Material design with *Clean architecture* by means of *Model-View-Presenter (MVP)* with *Repository pattern*
 as well as `Dagger 2` for *Dependency Injection*, trying to respect *SOLID principles* as much as possible.
 
 ### Logo
-![Screencast UX](./art/captain_america.png)
+![Logo](./art/captain_america.png)
 
 ## Overview
 At this open-source project, it is decoupled between `android` and `domain` modules or high level layers.
