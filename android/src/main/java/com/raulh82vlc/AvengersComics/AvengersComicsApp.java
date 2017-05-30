@@ -22,6 +22,8 @@ import com.raulh82vlc.AvengersComics.di.components.ApplicationComponent;
 import com.raulh82vlc.AvengersComics.di.components.DaggerApplicationComponent;
 import com.raulh82vlc.AvengersComics.di.modules.ApplicationModule;
 
+import timber.log.Timber;
+
 /**
  * {@link ApplicationComponent} could be used to provide dependencies needed by the whole app
  * execution. Application context linked dependencies would be exposed by it too.
