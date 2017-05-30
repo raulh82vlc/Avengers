@@ -81,7 +81,8 @@ public class ComicsRepositoryModule {
 
     @Provides
     @Singleton
-    NetOperations provideNetOperations(ComicsApi comicsApi, ComicsAPIVariables comicsVariables, ConnectionHandler connectionHandler) {
+    NetOperations provideNetOperations(ComicsApi comicsApi, ComicsAPIVariables comicsVariables,
+                                       ConnectionHandler connectionHandler) {
         return new NetOperationsImpl(comicsApi, comicsVariables, connectionHandler);
     }
 

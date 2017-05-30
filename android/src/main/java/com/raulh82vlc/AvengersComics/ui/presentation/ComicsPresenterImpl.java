@@ -87,7 +87,8 @@ public class ComicsPresenterImpl implements ComicsPresenter {
         if (view.isReady()) {
             if (mapOfAvenger.containsKey(heroID)) {
                 view.showLoader(mapOfAvenger.get(heroID));
-                interactorGetComicsList.executeLoadMore(heroID, mapOfAvenger, new GetMoreComicsListCallbackImpl(view, comicsListModelDataMapper));
+                interactorGetComicsList.executeLoadMore(heroID, mapOfAvenger,
+                        new GetMoreComicsListCallbackImpl(view, comicsListModelDataMapper));
             } else {
                 errorCase("No hero recognised called " + mapOfAvenger.get(heroID));
             }
@@ -100,7 +101,8 @@ public class ComicsPresenterImpl implements ComicsPresenter {
             if (mapOfAvenger.containsKey(heroID)) {
                 this.heroID = heroID;
                 view.showLoader(mapOfAvenger.get(heroID));
-                interactorGetComicsList.execute(heroID, mapOfAvenger, new GetComicsListCallbackImpl(view, comicsListModelDataMapper));
+                interactorGetComicsList.execute(heroID, mapOfAvenger,
+                        new GetComicsListCallbackImpl(view, comicsListModelDataMapper));
             } else {
                 errorCase("No hero recognised called " + mapOfAvenger.get(heroID));
             }

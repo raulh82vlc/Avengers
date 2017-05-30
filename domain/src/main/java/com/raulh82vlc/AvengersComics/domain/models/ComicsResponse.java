@@ -69,14 +69,14 @@ public class ComicsResponse {
 
     @Override
     public String toString() {
-        return "ComicsResponse {" +
-                "requestCode= '" + requestCode + '\'' +
-                ", requestStatus= '" + requestStatus + '\'' +
-                ", marvelCopyright= '" + marvelCopyright + '\'' +
-                ", attributionWithCopyText= '" + attributionWithCopyText + '\'' +
-                ", attributionOnHTML= '" + attributionOnHTML + '\'' +
-                ", tagOrHashCode= '" + tagOrHashCode + '\'' +
-                ", comicsDataResponse= " + comicsDataResponse +
-                '}';
+        return "ComicsResponse {"
+                + "requestCode= '" + requestCode + '\''
+                + ", requestStatus= '" + requestStatus + '\''
+                + ", marvelCopyright= '" + marvelCopyright + '\''
+                + ", attributionWithCopyText= '" + attributionWithCopyText + '\''
+                + ", attributionOnHTML= '" + attributionOnHTML + '\''
+                + ", tagOrHashCode= '" + tagOrHashCode + '\''
+                + ", comicsDataResponse= " + comicsDataResponse
+                + '}';
     }
 }

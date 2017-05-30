@@ -19,7 +19,7 @@ package com.raulh82vlc.AvengersComics.domain.datasources.net.parameters;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Calculating MD5 is critic, therefore a Unit test is mandatory
@@ -35,7 +35,10 @@ public class ComicsAPIVariablesImplTest {
     }
     @Test
     public void computeMD5() throws Exception {
-        final String hashCalculatedFromMD5 = comicsAPIVariables.computeMD5("1469886520" + comicsAPIVariables.getPrivateAPIKey() + comicsAPIVariables.getPublicAPIKey());
+        final String hashCalculatedFromMD5 = comicsAPIVariables.computeMD5(
+                "1469886520"
+                + comicsAPIVariables.getPrivateAPIKey()
+                + comicsAPIVariables.getPublicAPIKey());
         assertEquals("38c6d6eac62771368344a319f85f735d", hashCalculatedFromMD5);
     }
 }

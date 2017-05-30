@@ -38,9 +38,9 @@ public class ComicImageResponse {
 
     @Override
     public String toString() {
-        return "ComicImageResponse {" +
-                "uri= '" + uri + '\'' +
-                ", extensionOfImage= '" + extensionOfImage + '\'' +
-                '}';
+        return "ComicImageResponse {"
+                + "uri= '" + uri + '\''
+                + ", extensionOfImage= '" + extensionOfImage + '\''
+                + '}';
     }
 }

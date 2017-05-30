@@ -125,7 +125,8 @@ public class ComicsListFragment extends BaseFragment implements
     }
 
     private void setInfiniteScroll(LinearLayoutManager linearLayoutManager) {
-        RecyclerViewInfiniteScrollListener loadMoreListener = new RecyclerViewInfiniteScrollListener(linearLayoutManager);
+        RecyclerViewInfiniteScrollListener loadMoreListener =
+                new RecyclerViewInfiniteScrollListener(linearLayoutManager);
         loadMoreListener.setOnLoadMoreListener(this);
         recyclerView.addOnScrollListener(loadMoreListener);
     }

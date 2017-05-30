@@ -35,7 +35,8 @@ public class ComicUI implements Parcelable {
     private final String uriRandom;
     private final String characters;
 
-    public ComicUI(String titleComic, String uriThumbnail, String description, String creators, String characters, long comicId, String uriRandom) {
+    public ComicUI(String titleComic, String uriThumbnail, String description, String creators,
+                   String characters, long comicId, String uriRandom) {
         this.title = titleComic;
         this.uriThumbnail = uriThumbnail;
         this.description = description;

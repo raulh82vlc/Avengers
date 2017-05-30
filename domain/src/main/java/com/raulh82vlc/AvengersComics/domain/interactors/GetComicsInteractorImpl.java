@@ -54,14 +54,16 @@ public class GetComicsInteractorImpl implements GetComicsInteractor, Interactor 
     }
 
     @Override
-    public void executeLoadMore(String heroID, Map<String, String> mapOfAvenger, GetComicsListCallback callback) throws ConnectionException, HttpException {
+    public void executeLoadMore(String heroID, Map<String, String> mapOfAvenger,
+                                GetComicsListCallback callback) throws ConnectionException, HttpException {
         isPaged = true;
         setVariables(heroID, mapOfAvenger, callback);
         executor.run(this);
     }
 
     @Override
-    public void execute(String heroID, Map<String, String> mapOfAvenger, GetComicsListCallback callback) throws ConnectionException, HttpException {
+    public void execute(String heroID, Map<String, String> mapOfAvenger,
+                        GetComicsListCallback callback) throws ConnectionException, HttpException {
         isPaged = false;
         setVariables(heroID, mapOfAvenger, callback);
         executor.run(this);

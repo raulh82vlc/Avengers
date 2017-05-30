@@ -59,12 +59,12 @@ public class ComicsDataResponse {
 
     @Override
     public String toString() {
-        return "ComicsDataResponse {" +
-                "offsetPages= " + offsetPages +
-                ", limitPages= " + limitPages +
-                ", totalPages= " + totalPages +
-                ", countComics= " + countComics +
-                ", listOfComics= " + listOfComics +
-                "}";
+        return "ComicsDataResponse {"
+                + "offsetPages= " + offsetPages
+                + ", limitPages= " + limitPages
+                + ", totalPages= " + totalPages
+                + ", countComics= " + countComics
+                + ", listOfComics= " + listOfComics
+                + "}";
     }
 }

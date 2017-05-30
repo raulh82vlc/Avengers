@@ -54,12 +54,15 @@ public class ComicCharactersResponse {
 
     @Override
     public String toString() {
-        return "ComicCreatorsOrCharactersResponse {" +
-                "isAvailaible= " + isAvailaible + '\'' +
-                ", isReturned= " + isReturned + '\'' +
-                ", uri= " + uri + '\'' +
-                ", creators= " + creators + '\'' +
-                '}';
+        return "ComicCreatorsOrCharactersResponse {"
+                + "isAvailaible= "
+                + isAvailaible + '\''
+                + ", isReturned= " + isReturned
+                + '\''
+                + ", uri= " + uri
+                + '\'' + ", creators= " + creators
+                + '\''
+                + '}' + "\n";
     }
 
     /**
@@ -89,11 +92,12 @@ public class ComicCharactersResponse {
 
         @Override
         public String toString() {
-            return "CreatorResponse {" +
-                    "resourceURI= '" + uri + '\'' +
-                    ", name= '" + nameOfCreator + '\'' +
-                    ", role= '" + roleOfCreator + '\'' +
-                    '}';
+            return "CreatorResponse {"
+                    + "resourceURI= '" + uri
+                    + '\'' + ", name= '" + nameOfCreator + '\''
+                    + ", role= '" + roleOfCreator
+                    + '\''
+                    + '}';
         }
     }
 }

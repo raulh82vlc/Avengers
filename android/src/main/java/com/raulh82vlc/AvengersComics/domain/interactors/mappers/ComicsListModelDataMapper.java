@@ -59,8 +59,11 @@ public class ComicsListModelDataMapper {
         if (size > 0) {
             for (ComicResponse comic : comicsListResponse) {
                 String uri = null;
-                if (!comic.getImagesRandom().isEmpty() && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getUri())) {
-                    uri = comic.getImagesRandom().get(0).getUri();
+                if (!comic.getImagesRandom().isEmpty()
+                        && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getUri())
+                        && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getExtensionOfImage())) {
+                    uri = comic.getImagesRandom().get(0).getUri()
+                            + comic.getImagesRandom().get(0).getExtensionOfImage();
                 }
                 String creators = getPeople(comic.getCreatorsOfComic().getCreators());
                 String characters = getPeople(comic.getCharactersOfComic().getCreators());

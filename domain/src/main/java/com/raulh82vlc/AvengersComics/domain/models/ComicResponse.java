@@ -88,14 +88,14 @@ public class ComicResponse {
 
     @Override
     public String toString() {
-        return "ComicResponse {" +
-                "comicId= " + comicId +
-                ", digitalComicId= " + digitalComicId +
-                ", titleComic= " + titleComic +
-                ", issueMarvelNumber= " + issueMarvelNumber +
-                ", descriptionComic= " + descriptionComic +
-                ", creatorsOfComic= " + creatorsOfComic +
-                ", characters OfComic= " + charactersOfComic +
-                "}";
+        return "ComicResponse {"
+                + "comicId= " + comicId
+                + ", digitalComicId= " + digitalComicId
+                + ", titleComic= " + titleComic
+                + ", issueMarvelNumber= " + issueMarvelNumber
+                + ", descriptionComic= " + descriptionComic
+                + ", creatorsOfComic= " + creatorsOfComic
+                + ", characters OfComic= " + charactersOfComic
+                + "}";
     }
 }

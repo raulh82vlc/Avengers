@@ -58,7 +58,8 @@ public class NetOperationsImpl implements NetOperations<ComicsResponse> {
     }
 
     @Override
-    public ComicsResponse getComicsList(Context context, String heroID, int pageId) throws ConnectionException, HttpException {
+    public ComicsResponse getComicsList(Context context, String heroID, int pageId)
+            throws ConnectionException, HttpException {
         if (connectionHandler.isThereConnection(context)) {
             Call<ComicsResponse> comicsResponseCall = comicsApi.getComicsFromHero(heroID,
                     parameters.getTimeStamp(), parameters.getPublicAPIKey(), parameters.getAPIHashCode(),

@@ -29,9 +29,11 @@ import java.util.Map;
  */
 public interface GetComicsInteractor {
 
-    void executeLoadMore(String heroID, Map<String, String> mapOfAvenger, GetComicsListCallback callback) throws ConnectionException, HttpException;
+    void executeLoadMore(String heroID, Map<String, String> mapOfAvenger,
+                         GetComicsListCallback callback) throws ConnectionException, HttpException;
 
-    void execute(String heroID, Map<String, String> mapOfAvenger, GetComicsListCallback callback) throws ConnectionException, HttpException;
+    void execute(String heroID, Map<String, String> mapOfAvenger,
+                 GetComicsListCallback callback) throws ConnectionException, HttpException;
 
     interface GetComicsListCallback {
         void onGetComicsListOK(ComicsResponse comicList);
