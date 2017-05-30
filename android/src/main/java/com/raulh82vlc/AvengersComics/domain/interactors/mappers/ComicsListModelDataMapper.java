@@ -77,6 +77,9 @@ public class ComicsListModelDataMapper {
     }
 
     @NonNull
+    /**
+     * Get a group of people in a readable format
+     */
     public String getPeople(List<ComicCharactersResponse.CreatorResponse> listOfPeople) {
         StringBuilder builder = new StringBuilder();
         for (ComicCharactersResponse.CreatorResponse creator : listOfPeople) {
@@ -84,7 +87,9 @@ public class ComicsListModelDataMapper {
             if (!TextUtils.isEmpty(creator.getRoleOfCreator())) {
                 role = creator.getRoleOfCreator() + ": ";
             }
-            builder.append(role + creator.getNameOfCreator() + "\n");
+            builder.append(role);
+            builder.append(creator.getNameOfCreator());
+            builder.append("\n");
         }
         return builder.toString();
     }
