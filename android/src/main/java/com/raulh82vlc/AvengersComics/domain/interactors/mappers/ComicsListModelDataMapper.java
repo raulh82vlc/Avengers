@@ -17,6 +17,7 @@
 package com.raulh82vlc.AvengersComics.domain.interactors.mappers;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.raulh82vlc.AvengersComics.di.scopes.ActivityScope;
@@ -58,13 +59,7 @@ public class ComicsListModelDataMapper {
         List<ComicUI> listOfComics = new ArrayList<>(size);
         if (size > 0) {
             for (ComicResponse comic : comicsListResponse) {
-                String uri = null;
-                if (!comic.getImagesRandom().isEmpty()
-                        && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getUri())
-                        && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getExtensionOfImage())) {
-                    uri = comic.getImagesRandom().get(0).getUri()
-                        + "." + comic.getImagesRandom().get(0).getExtensionOfImage();
-                }
+                String uri = getRandomImage(comic);
                 String creators = getPeople(comic.getCreatorsOfComic().getCreators());
                 String characters = getPeople(comic.getCharactersOfComic().getCreators());
                 listOfComics.add(
@@ -79,10 +74,27 @@ public class ComicsListModelDataMapper {
         return listOfComics;
     }
 
-    @NonNull
     /**
-     * Get a group of people in a readable format
-     */
+     * Get a random image from the list of ones if there are any (this is optional)
+     **/
+    @Nullable
+    private String getRandomImage(ComicResponse comic) {
+        String uri = null;
+        if (!comic.getImagesRandom().isEmpty()
+                && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getUri())
+                && !TextUtils.isEmpty(comic.getImagesRandom().get(0).getExtensionOfImage())) {
+            uri = comic.getImagesRandom().get(0).getUri()
+                + "." + comic.getImagesRandom().get(0).getExtensionOfImage();
+        }
+        return uri;
+    }
+
+
+    /**
+     * <p>Get a group of people in a readable format, if the role does not exists,
+     * it does not appears (happens in characters)</p>
+     **/
+    @NonNull
     public String getPeople(List<ComicCharactersResponse.CreatorResponse> listOfPeople) {
         StringBuilder builder = new StringBuilder();
         for (ComicCharactersResponse.CreatorResponse creator : listOfPeople) {
