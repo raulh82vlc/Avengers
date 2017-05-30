@@ -54,6 +54,7 @@ Support SDKs from **16** to **25**
 - [Retrofit 2](https://github.com/square/retrofit) v2.1.0 for Network requests
 - [OkHttp 3](https://github.com/square/okhttp) v3.6.0 as client for Retrofit
 - [Picasso](http://square.github.io/picasso/) v2.5.2 for image rendering
+- [Timber](https://github.com/timber/timber) v4.1.2 for logs in debug mode only
 - [Mockito](http://site.mockito.org/) for Mocking artifacts
 - [JUnit](http://junit.org/) for Unit testing Graph algorithm and its datastructure or rounding.
 

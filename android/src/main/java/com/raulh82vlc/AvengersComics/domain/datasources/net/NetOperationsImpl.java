@@ -17,9 +17,6 @@
 package com.raulh82vlc.AvengersComics.domain.datasources.net;
 
 import android.content.Context;
-import android.util.Log;
-
-import com.raulh82vlc.AvengersComics.BuildConfig;
 import com.raulh82vlc.AvengersComics.R;
 import com.raulh82vlc.AvengersComics.domain.datasources.net.connection.ConnectionHandler;
 import com.raulh82vlc.AvengersComics.domain.datasources.net.parameters.ComicsAPIVariables;
@@ -36,6 +33,7 @@ import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Response;
+import timber.log.Timber;
 
 
 /**
@@ -66,23 +64,19 @@ public class NetOperationsImpl implements NetOperations<ComicsResponse> {
                     parameters.getPageLimit(), getPageOffset(pageId));
             try {
                 Response<ComicsResponse> response = comicsResponseCall.execute();
-                if (BuildConfig.DEBUG) {
-                    Log.d(TAG, MessageFormat.format("Http header: {0}", response.headers().toString()));
-                    Log.d(TAG, MessageFormat.format("Http response: {0}", response.message()));
-                }
+                Timber.d(TAG, MessageFormat.format("Http header: {0}", response.headers().toString()));
+                Timber.d(TAG, MessageFormat.format("Http response: {0}", response.message()));
                 if (isSuccess(response.code())) {
                     ComicsResponse comicsResponse = response.body();
-                    if (BuildConfig.DEBUG) {
-                        Log.d(TAG, MessageFormat.format("Http response code: {0}", comicsResponse.getRequestCode()));
-                        Log.d(TAG, MessageFormat.format("Http response body: {0}", comicsResponse.toString()));
-                    }
+                    Timber.d(MessageFormat.format("Http response code: {0}", comicsResponse.getRequestCode()));
+                    Timber.d(MessageFormat.format("Http response body: {0}", comicsResponse.toString()));
                     return comicsResponse;
                 } else {
-                    Log.e(TAG, MessageFormat.format("Error: Http response code: {0}", response.code()));
+                    Timber.e(MessageFormat.format("Error: Http response code: {0}", response.code()));
                     throw new HttpException(context.getResources().getString(R.string.error_http, response.code()));
                 }
             } catch (IOException e) {
-                Log.e(TAG, "Error: " + e.getMessage());
+                Timber.e(MessageFormat.format("Http response body: {0}", e.getMessage()));
                 e.printStackTrace();
                 throw new IOCustomException(context.getResources().getString(R.string.error_io, e.getMessage()));
             }
